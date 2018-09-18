@@ -4,15 +4,588 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UniDev</title>
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <link rel="stylesheet" href="css/yash.css">
-</head>
-<body>
-    <h1>Work Done By Yash</h1>
+    <title>Unidev</title>
 
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/yash.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  
+    <style>
+        
+      @font-face{
+        font-family: heading;
+        src: url("/home/yash/WebDev/unidev/Assets/Fonts/DIN Condensed/DIN Condensed Bold.ttf");
+      }
+      @font-face{
+        font-family: paragraph;
+        src: url("/home/yash/WebDev/unidev/Assets/Fonts/SF Pro Text/SF-Pro-Text-Medium.otf");
+      }
+    
+  body{
+      background-color: rgb(89, 0, 255);
+  }
+  .nav-stacked li a{
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      color:rgb(198, 238, 253);
+    text-decoration: none;
+    word-spacing: 2px;
+    font-family: paragraph;
+    font-size:19px;
+    }
+     .nav-stacked li .active{
+      border-left: 3px solid rgb(68, 255, 255);
+      
+     }
+     .nav-stacked li:hover a{
+      border-left: 3px solid rgb(255, 114, 114);
+      background-color: rgba(37, 37, 85, 0);
+      color:snow;
+      }
+      
+      .bottom-arrow li:hover a{
+      border-left: none;
+      color:rgb(255, 255, 255);
+      background-color: rgba(37, 37, 85, 0);
+      
+      }
+      .nav-stacked li{
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-top: 50px;
+         
+     }
+  .nav {
+       position: relative;
+      background-color: rgba(0, 0, 0, 0.952);
+      height: 100%;
+      margin-right: 0px;
+      bottom:0px;
+  }
+  .bottom-arrow li a{
+     
+      color:rgb(198, 238, 253);
+    text-decoration: none;
+  }
+  #arrow{
+      font-size: 65px;
+      text-align: center;
+      
+      
+  }
+  .bottom-arrow{
+      background-color: rgb(89, 0, 255);
+      margin-top:92px;
+      padding-top:15px;
+      margin-bottom:0px;
+      padding-bottom:20px;
+      
+  }
+
+ 
+  #home{
+      background-color: rgb(24, 24, 24);
+      text-align: justify; /* For Edge */
+    -moz-text-align-last: left; /* For Firefox prior 58.0 */
+    text-align-last: left;
+  }
+  #home #heading{
+      font-family: heading;
+      font-size:12vw;
+      letter-spacing: 0px;
+      color:aliceblue;
+    /*  margin-top: 256px;*/
+    line-height:6vw;
+      padding:0px;
+      
+  }
+  #home #sub-heading{
+      font-family: heading;
+      font-size:4vw;
+      letter-spacing: 4px;
+      color:aliceblue;
+     /* margin-top: 400px;*/
+     line-height:1vw;
+      padding:0px;
+  }
+  #home #pre-heading{
+      font-family: heading;
+      font-size:3vw;
+      letter-spacing: 2px;
+      color:aliceblue;
+     /* margin-top: 248px;*/
+      padding:0px;
+      
+  }
+  #home #para{
+      font-family: paragraph;
+      font-size:1.1vw;
+      letter-spacing: 1px;
+      color:aliceblue;
+     /* margin-top: 508px;*/
+      padding:0px;
+  }
+  #attend{
+      background-color: rgb(255, 255, 255);
+      text-align: justify; /* For Edge */
+    -moz-text-align-last: left; /* For Firefox prior 58.0 */
+    text-align-last: left;
+  }
+  #attend #heading{
+      font-family: heading;
+      font-size:12vw;
+      letter-spacing: 2px;
+      text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+      color:rgb(254, 254, 255);
+    /*  margin-top: 256px;*/
+        line-height: 9vw;
+      padding:0px;
+  }
+  #attend #sub-heading{
+      font-family: heading;
+      font-size:4vw;
+      letter-spacing: 4px;
+      color:rgb(13, 13, 14);
+     /* margin-top: 400px;*/
+        line-height: 1vw;
+      padding:0px;
+  }
+  #attend #sub-para{
+      font-family: paragraph;
+      font-size:1.4vw;
+      letter-spacing: 2px;
+      color:rgb(0, 0, 0);
+      
+      padding:0px;
+  }
+  #attend #para{
+      font-family: paragraph;
+      font-size:1.1vw;
+      letter-spacing: 1px;
+      color:rgb(0, 0, 0);
+     /* margin-top: 508px;*/
+      padding:0px;
+  }
+  #WhenWhere{
+      background-color: rgb(123, 31, 228);}
+    #WhenWhere .heading{
+
+      text-align: justify; /* For Edge */
+    -moz-text-align-last: right; /* For Firefox prior 58.0 */
+    text-align-last: right;
+  }
+    
+  #WhenWhere #heading{
+      font-family: heading;
+      font-size:10vw;
+      letter-spacing: 0px;
+      color:rgb(254, 254, 255);
+    /*  margin-top: 256px;*/
+        line-height:7vw;
+      padding:0px;
+  }
+  #WhenWhere #sub-heading{
+      font-family: heading;
+      font-size:4vw;
+      letter-spacing: 0px;
+      color:rgb(255, 255, 255);
+     /* margin-top: 400px;*/
+        line-height: 1vw;
+      padding:0px;
+  }
+  #WhenWhere #sub-para{
+      font-family: paragraph;
+      font-size:1.4vw;
+      letter-spacing: 1px;
+      color:rgb(255, 255, 255);
+      
+      padding:0px;
+  }
+  #WhenWhere #para{
+      font-family: paragraph;
+      font-size:1.1vw;
+      letter-spacing:.05vw;
+      color:rgb(255, 255, 255);
+     /* margin-top: 508px;*/
+      padding:0px;
+  }
+  #about{
+      background-color: rgb(24, 24, 24);
+  }
+  #about .heading{
+
+text-align: justify; /* For Edge */
+-moz-text-align-last: right; /* For Firefox prior 58.0 */
+text-align-last: right;
+}
+  #about #heading{
+      font-family: heading;
+      font-size:9vw;
+      letter-spacing: 2px;
+      color:rgb(254, 254, 255);
+        line-height: 6vw;
+      padding:0px;
+  }
+  #about #sub-heading{
+      font-family: heading;
+      font-size:2.5vw;
+      letter-spacing: .5vw;
+      color:rgb(255, 255, 255);
+     /* margin-top: 400px;*/
+     line-height: 1vw;
+      padding:0px;
+  }
+  #about #sub-para{
+      font-family: paragraph;
+      font-size:1.4vw;
+      letter-spacing: 2px;
+      color:rgb(255, 255, 255);
+      
+      padding:0px;
+  }
+  #about #para{
+      font-family: paragraph;
+      font-size:1.1vw;
+      letter-spacing: 1px;
+      color:rgb(255, 255, 255);
+     /* margin-top: 508px;*/
+      padding:0px;
+  }
+  .heading{
+      margin-bottom:0px;
+  }
+  #ADG-logo{
+      padding:50px;
+  }
+  
+    </style>
+</head>
+<body ondblclick="change()">
+
+    <div class="vertical-nav">
+        <nav class="nav nav-pills nav-top-fixed pull-right" >
+            <ul class=" nav-stacked ">
+                <li><a id="home-li" class="active" onclick="active('home')" href="#home">HOME</a></li>
+                <li ><a id="attend-li"  onclick="active('attend')" href="#attend">WHY ATTEND</a></li>
+                <li ><a  id="WhenWhere-li" onclick="active('WhenWhere')" href="#WhenWhere">WHEN AND WHERE</a></li>
+                <li ><a id="about-li" onclick="active('about')" href="#about">ABOUT ADG</a></li>
+                 
+            </ul> 
+            <ul class="bottom-arrow">
+                <li onclick="change()"><a  id="arrow"  ><i id="arrow-down" class="fas fa-arrow-down"></i></a></li> 
+            </ul>  
+        </nav> 
+    </div>
+    
+       <div>
+        <!--Home page-->
+            <div id="home"  style="display: block" >
+                    <div id="ADG-logo" onclick="play()"  class="visible-md visible-lg">
+                        <img class="image-responsive" src="Assets/ADG-logo.png" alt="">
+                    </div>
+                    <div class="row"  style="height:100%">
+                        <div class=" col-xs-1"></div>
+                        <div class="col-xs-6">
+                            <div class="heading w3-animate-bottom" >
+                                <br>
+                                <!-- <img class="img-responsive" src="Assets/home-heading.png"> -->
+                                <div class="row" id="pre-heading" >
+                                    <p>GRAVITAS'18</p>
+                                </div><br>
+                                <div class="row" id="heading">
+                                    <P>UNIDEV 3</P>
+                                </div><br>
+                                <div class="row" id="sub-heading">
+                                        <P>AR. UNITY. NO CODE.</P>
+                                </div>
+                                <br><br>
+                                <div class="row" id="para" >
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique enim et urna fermentum consectetur. porta gravida nunc. Praesent sodales nisi at dolor laoreet, eu gravida orci convallis. Maecenas hendrerit varius velit, ut pulvinar tellus mollis sit amet. Vivamus finibus tempus nunc eu pellentesque. Aliquam faucibus ex leo, vitae rhoncus leo tincidunt at. Sed vehicula ante quis ipsum lobortis viverra. Curabitur pretium, quam commodo aliquet hendrerit, dolor leo pellentesque arcu, eu tincidunt urna diam id mi. Ut eu neque vel magna luctus iaculis.
+
+                                             Proin luctus bibendum diam maximus euismod. In in ante sit amet nunc molestie efficitur. Morbi fermentum sem a aliquam auctor. Vivamus ac consectetur massa, quis convallis tellus. In sed leo in ligula viverra porta.
+                                            
+                                            </p>
+                                </div>
+                                </div>
+                                
+                        </div>
+                        <div class="col-xs-3">
+                            
+                                <img class="img-responsive w3-animate-bottom" src="Assets/undraw_checklist_7q37.png">
+                            
+                        </div>
+                        
+                    </div>
+                    
+            </div>
+            
+            <!--Attend page-->
+            <div id="attend" style="display: none" >
+                    
+                    <div id="ADG-logo" class="visible-md visible-lg">
+                            <img src="Assets/ADG-logo(black).png" alt="" class="visible-md visible-lg">
+                        </div>
+                        <div class="row"  style="height:100%">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-4">
+                                <div class="heading w3-animate-bottom">
+                                    <br><br>
+                                    <!-- <img class="img-responsive" src="Assets/attend-heading.png" style="width:80%;"> -->
+                                    <div class="row" id="heading" style="position: relative;">
+                                        <p>WHY</p>
+                                    </div>
+                                    <div class="row" id="heading" style="position: relative;">
+                                        <P>ATTEND</P>
+                                    </div>
+                                    <div class="row" id="sub-heading" style="position: relative;">
+                                            <P>GAMES. FILTERS. LIFE.</P>
+                                    </div>
+                                    <br><br>
+                                    <div class="row" id="sub-para" style="position: relative;">
+                                        <p>Lorem ipsum dolar sit amet, <br> consectetur adipiscing elit</p>
+                                    </div>
+                                    </div>
+                                    
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                           
+                                    </div>
+                                    <div class="col-xs-7">
+                                         <img class="img-responsive w3-animate-bottom"  src="Assets/undraw_product_teardown_elol.png">
+                                    </div>
+                                    </div>
+                                <br><br>
+                                <div class="row w3-animate-bottom" id="para" style="position: relative;">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus tristique enim et urna fermentum consectetur. porta gravida nunc. 
+                                            Praesent sodales nisi at dolor laoreet, eu gravida orci convallis. Maecenas hendrerit varius velit, 
+                                            ut pulvinar tellus mollis sit amet. Vivamus finibus tempus nunc eu pellentesque. Aliquam faucibus ex leo,
+                                             vitae rhoncus leo tincidunt at. Sed vehicula ante quis ipsum lobortis viverra. Curabitur pretium,
+                                              quam commodo aliquet hendrerit, dolor leo pellentesque arcu, eu tincidunt urna diam id mi. Ut eu neque 
+                                              vel magna luctus iaculis.
+                                            Proin luctus bibendum diam maximus euismod. In in ante sit amet nunc molestie efficitur. 
+                                            
+                                        </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+            </div>
+
+            <!-- When and Where page -->
+            <div id="WhenWhere" style="display: none">
+                    <div id="ADG-logo">
+                            <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
+                        </div>
+                        <div class="row"  style="height:100%">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-4">
+                                    <div class="row">
+                                            
+                                                 <img class="img-responsive w3-animate-bottom"  src="Assets/undraw_map_light_6ttm.png" style="width: 80% ">
+                                            
+                                     </div>
+                                     <br><br><br><br>
+                                     <div class="row" id="sub-para" style="position: relative;">
+                                            <p>Lorem ipsum dolar sit amet, <br> consectetur adipiscing elit</p>
+                                        </div>
+                                    
+                            </div>
+                            <div class="col-xs-6 w3-animate-bottom">
+                                    
+                                     <div class="heading ">
+                                        <!-- <img class="img-responsive" src="Assets/whenWhere-heading.png" style="width:70%;"> -->
+                                            <br><br><br><br>
+                                                        <div class="row" id="heading" style="position: relative;">
+                                                            <p>WHEN AND</p>
+                                                        </div>
+                                                        <div class="row" id="heading" style="position: relative;">
+                                                            <P>WHERE</P>
+                                                        </div>
+                                                        <div class="row" id="sub-heading" style="position: relative;">
+                                                                <P> WHERE WE CHILL</P>
+                                                        </div>
+                                        </div>
+                                <br><br>
+                                <div class="row" id="para" style="position: relative;">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus tristique enim et urna fermentum consectetur. porta gravida nunc. 
+                                            Praesent sodales nisi at dolor laoreet, eu gravida orci convallis. Maecenas hendrerit varius velit, 
+                                            ut pulvinar tellus mollis sit amet. Vivamus finibus tempus nunc eu pellentesque. Aliquam faucibus ex leo,
+                                             vitae rhoncus leo tincidunt at. Sed vehicula ante quis ipsum lobortis viverra. Curabitur pretium,
+                                              quam commodo aliquet hendrerit, dolor leo pellentesque arcu, eu tincidunt urna diam id mi. Ut eu neque 
+                                              vel magna luctus iaculis.
+                                            Proin luctus bibendum diam maximus euismod. In in ante sit amet nunc molestie efficitur. 
+                                            Morbi fermentum sem a aliquam auctor
+                                        </p>
+                                </div>
+                                
+                            
+                        </div>
+            </div>
+            </div>
+            <!-- About page -->
+            <div id="about" style="display: none">
+                    <div id="ADG-logo">
+                            <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
+                        </div>
+                        <div class="row"  style="height:100%">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-4">
+                                <div class="heading w3-animate-bottom">
+                                    <br><br><br>
+                                    <!-- <img class="img-responsive" src="Assets/about-heading.png" style="width:100%;"> -->
+                                    <div class="row" id="heading" style="position: relative;">
+                                        <p>ABOUT  ADG</p>
+                                    </div>
+                                    <div class="row" id="sub-heading" style="position: relative;">
+                                        <P>THE COOL BOIS</P>
+                                    </div></div>
+                                    <br><br><br><br><br><br>
+                                    <div class="row w3-animate-bottom" id="sub-para" style="position: relative;">
+                                        <p>Lorem ipsum dolar sit amet, <br> consectetur adipiscing elit</p>
+                                    
+                                    </div>
+                                    
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                           
+                                    </div>
+                                    <div class="col-xs-8">
+                                         <img class="img-responsive w3-animate-bottom"  src="Assets/undraw_team_spirit_hrr4.png">
+                                    </div>
+                                    </div>
+                                <br><br>
+                                <div class="row w3-animate-bottom" id="para" style="position: relative;">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Phasellus tristique enim et urna fermentum consectetur. porta gravida nunc. 
+                                            Praesent sodales nisi at dolor laoreet, eu gravida orci convallis. Maecenas hendrerit varius velit, 
+                                            ut pulvinar tellus mollis sit amet. Vivamus finibus tempus nunc eu pellentesque. Aliquam faucibus ex leo,
+                                             In sed leo in ligula viverra porta.
+                                        </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+            </div>
+            
+            
+<script>
+       
+       var current = 'home';
+            
+
+            var active = (act) => {
+                current = act;
+
+                if(current === 'home'){
+                    $("#home").css("display","block");
+                    $("#attend").css("display","none");
+                    $("#WhenWhere").css("display","none");
+                    $("#about").css("display","none");
+                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                    $("#home-li").addClass("active");
+                    $("#attend-li").removeClass("active");
+                    $("#WhenWhere-li").removeClass("active");
+                    $("#about-li").removeClass("active");
+                }
+                else if(current === 'attend'){
+                    $("#home").css("display","none");
+                    $("#attend").css("display","block");
+                    $("#WhenWhere").css("display","none");
+                    $("#about").css("display","none");
+                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                    $("#home-li").removeClass("active");
+                    $("#attend-li").addClass("active");
+                    $("#WhenWhere-li").removeClass("active");
+                    $("#about-li").removeClass("active");
+                }
+                else if(current === 'WhenWhere'){
+                    $("#home").css("display","none");
+                    $("#attend").css("display","none");
+                    $("#WhenWhere").css("display","block");
+                    $("#about").css("display","none");
+                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                    $("#home-li").removeClass("active");
+                    $("#attend-li").removeClass("active");
+                    $("#WhenWhere-li").addClass("active");
+                    $("#about-li").removeClass("active");
+                    
+                }
+                else if(current === 'about'){
+                    $("#home").css("display","none");
+                    $("#attend").css("display","none");
+                    $("#WhenWhere").css("display","none");
+                    $("#about").css("display","block");
+                    $("#arrow").html(`<i class="fas fa-arrow-up"></i>`);
+                    $("#home-li").removeClass("active");
+                    $("#attend-li").removeClass("active");
+                    $("#WhenWhere-li").removeClass("active");
+                    $("#about-li").addClass("active");
+                    
+                }
+
+            }
+
+            var change = () => {
+                if(current === 'home'){
+                    $("#home").css("display","none");
+                    $("#attend").css("display","block");
+                    $("#WhenWhere").css("display","none");
+                    $("#about").css("display","none");
+                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                    $("#home-li").removeClass("active");
+                    $("#attend-li").addClass("active");
+                    $("#WhenWhere-li").removeClass("active");
+                    $("#about-li").removeClass("active");
+                    current= 'attend';
+                }
+                else if(current === 'attend'){
+                    $("#home").css("display","none");
+                    $("#attend").css("display","none");
+                    $("#WhenWhere").css("display","block");
+                    $("#about").css("display","none");
+                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                    $("#home-li").removeClass("active");
+                    $("#attend-li").removeClass("active");
+                    $("#WhenWhere-li").addClass("active");
+                    $("#about-li").removeClass("active");
+                    current= 'WhenWhere';
+                }
+                else if(current === 'WhenWhere'){
+                    $("#home").css("display","none");
+                    $("#attend").css("display","none");
+                    $("#WhenWhere").css("display","none");
+                    $("#about").css("display","block");
+                    $("#arrow").html(`<i class="fas fa-arrow-up"></i>`);
+                    $("#home-li").removeClass("active");
+                    $("#attend-li").removeClass("active");
+                    $("#WhenWhere-li").removeClass("active");
+                    $("#about-li").addClass("active");
+                    current= 'about';
+                }
+                else if(current === 'about'){
+                    $("#home").css("display","block");
+                    $("#attend").css("display","none");
+                    $("#WhenWhere").css("display","none");
+                    $("#about").css("display","none");
+                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                    $("#home-li").addClass("active");
+                    $("#attend-li").removeClass("active");
+                    $("#WhenWhere-li").removeClass("active");
+                    $("#about-li").removeClass("active");
+                    current= 'home';
+                }
+                }
+</script>
+    
 </body>
 </html>
