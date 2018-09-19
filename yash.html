@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Unidev</title>
 
@@ -33,9 +33,9 @@
       text-orientation: mixed;
       color:rgb(198, 238, 253);
     text-decoration: none;
-    word-spacing: 2px;
+    /* word-spacing: 2px; */
     font-family: paragraph;
-    font-size:19px;
+    font-size:1vw;
     }
      .nav-stacked li .active{
       border-left: 3px solid rgb(68, 255, 255);
@@ -49,14 +49,14 @@
       
       .bottom-arrow li:hover a{
       border-left: none;
-      color:rgb(255, 255, 255);
+      color:rgb(68, 255, 255);
       background-color: rgba(37, 37, 85, 0);
       
       }
       .nav-stacked li{
-         padding-left: 20px;
-         padding-right: 20px;
-         padding-top: 50px;
+         padding-left: 1vw;
+         padding-right: 2vw;
+         padding-top:2.5vw;
          
      }
   .nav {
@@ -72,23 +72,25 @@
     text-decoration: none;
   }
   #arrow{
-      font-size: 65px;
+      font-size: 3.8vw;
       text-align: center;
       
       
   }
   .bottom-arrow{
       background-color: rgb(89, 0, 255);
-      margin-top:92px;
-      padding-top:15px;
-      margin-bottom:0px;
-      padding-bottom:20px;
-      
+      margin-top:3.5vw;
+      padding-top:1.5vw;
+      margin-bottom:0vw;
+      padding-bottom:1.2vw;
+      height: 100%;
+        
   }
 
  
   #home{
       background-color: rgb(24, 24, 24);
+      width:100%;   
       text-align: justify; /* For Edge */
     -moz-text-align-last: left; /* For Firefox prior 58.0 */
     text-align-last: left;
@@ -131,6 +133,7 @@
   }
   #attend{
       background-color: rgb(255, 255, 255);
+      width:100%;
       text-align: justify; /* For Edge */
     -moz-text-align-last: left; /* For Firefox prior 58.0 */
     text-align-last: left;
@@ -171,7 +174,10 @@
       padding:0px;
   }
   #WhenWhere{
-      background-color: rgb(123, 31, 228);}
+      background-color: rgb(123, 31, 228);
+      width:100%;
+      }
+      
     #WhenWhere .heading{
 
       text-align: justify; /* For Edge */
@@ -215,6 +221,7 @@
   }
   #about{
       background-color: rgb(24, 24, 24);
+      width:100%;
   }
   #about .heading{
 
@@ -283,7 +290,7 @@ text-align-last: right;
     
        <div>
         <!--Home page-->
-            <div id="home"  style="display: block" >
+            <div id="home"  style="display: block"  class="container">
                     <div id="ADG-logo" onclick="play()"  class="visible-md visible-lg">
                         <img class="image-responsive" src="Assets/ADG-logo.png" alt="">
                     </div>
@@ -324,7 +331,7 @@ text-align-last: right;
             </div>
             
             <!--Attend page-->
-            <div id="attend" style="display: none" >
+            <div id="attend" style="display: none"  class="container" >
                     
                     <div id="ADG-logo" class="visible-md visible-lg">
                             <img src="Assets/ADG-logo(black).png" alt="" class="visible-md visible-lg">
@@ -379,7 +386,7 @@ text-align-last: right;
             </div>
 
             <!-- When and Where page -->
-            <div id="WhenWhere" style="display: none">
+            <div id="WhenWhere" style="display: none"  class="container">
                     <div id="ADG-logo">
                             <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
                         </div>
@@ -401,7 +408,7 @@ text-align-last: right;
                                     
                                      <div class="heading ">
                                         <!-- <img class="img-responsive" src="Assets/whenWhere-heading.png" style="width:70%;"> -->
-                                            <br><br><br><br>
+                                            
                                                         <div class="row" id="heading" style="position: relative;">
                                                             <p>WHEN AND</p>
                                                         </div>
@@ -431,7 +438,7 @@ text-align-last: right;
             </div>
             </div>
             <!-- About page -->
-            <div id="about" style="display: none">
+            <div id="about" style="display: none"  class="container">
                     <div id="ADG-logo">
                             <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
                         </div>
