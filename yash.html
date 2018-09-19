@@ -89,8 +89,13 @@
       height: 100%;
         
   }
+ #heading{
+    animation-duration: 1.6s;
+    animation-delay: .3s;
+     -webkit-animation-duration: 1.6s;
+     -webkit-animation-delay: .3s;
+ }
 
- 
   #home{
       background-color: rgb(24, 24, 24);
       width:100%;   
@@ -492,11 +497,23 @@ text-align-last: right;
 <script>
        
        var current = 'home';
+       $(document).ready(function(){
+        // $("#heading").css("color","rgb(68, 255, 255)");
+        $('#heading').addClass('animated slideInLeft');
+        //    setTimeout(() => {
+        //     $('#heading').removeClass('animated slideInLeft');
             
-
-            var active = (act) => {
+        //    }, 1200);
+        //    setTimeout(() => {
+        //     $('#heading').removeClass('animated slideInLeft');
+        //     $('#heading').addClass('animated jello');
+        //     $("#heading").css("color","aliceblue");
+        //     },2000)
+});
+       
+            var active = (act) => { 
                 current = act;
-
+                $('*#heading').addClass('animated flipInY');
                 if(current === 'home'){
                     $("#home").css("display","block");
                     $("#attend").css("display","none");
@@ -547,6 +564,7 @@ text-align-last: right;
             }
 
             var change = () => {
+                $('*#heading').addClass('animated flipInY');
                 if(current === 'home'){
                     $("#home").css("display","none");
                     $("#attend").css("display","block");
