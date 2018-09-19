@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   
     <style>
@@ -65,6 +67,7 @@
       height: 100%;
       margin-right: 0px;
       bottom:0px;
+      z-index: 3;
   }
   .bottom-arrow li a{
      
@@ -95,6 +98,7 @@
     -moz-text-align-last: left; /* For Firefox prior 58.0 */
     text-align-last: left;
   }
+  
   #home #heading{
       font-family: heading;
       font-size:12vw;
@@ -275,14 +279,14 @@ text-align-last: right;
 
     <div class="vertical-nav">
         <nav class="nav nav-pills nav-top-fixed pull-right" >
-            <ul class=" nav-stacked ">
+            <ul class=" nav-stacked animated slideInRight">
                 <li><a id="home-li" class="active" onclick="active('home')" href="#home">HOME</a></li>
                 <li ><a id="attend-li"  onclick="active('attend')" href="#attend">WHY ATTEND</a></li>
                 <li ><a  id="WhenWhere-li" onclick="active('WhenWhere')" href="#WhenWhere">WHEN AND WHERE</a></li>
                 <li ><a id="about-li" onclick="active('about')" href="#about">ABOUT ADG</a></li>
                  
             </ul> 
-            <ul class="bottom-arrow">
+            <ul class="bottom-arrow animated slideInDown">
                 <li onclick="change()"><a  id="arrow"  ><i id="arrow-down" class="fas fa-arrow-down"></i></a></li> 
             </ul>  
         </nav> 
@@ -290,14 +294,14 @@ text-align-last: right;
     
        <div>
         <!--Home page-->
-            <div id="home"  style="display: block"  class="container">
+            <div id="home"  style="display: block"  class="container  animated slideInLeft">
                     <div id="ADG-logo" onclick="play()"  class="visible-md visible-lg">
                         <img class="image-responsive" src="Assets/ADG-logo.png" alt="">
                     </div>
                     <div class="row"  style="height:100%">
                         <div class=" col-xs-1"></div>
                         <div class="col-xs-6">
-                            <div class="heading w3-animate-bottom" >
+                            <div class="heading" >
                                 <br>
                                 <!-- <img class="img-responsive" src="Assets/home-heading.png"> -->
                                 <div class="row" id="pre-heading" >
@@ -322,7 +326,7 @@ text-align-last: right;
                         </div>
                         <div class="col-xs-3">
                             
-                                <img class="img-responsive w3-animate-bottom" src="Assets/undraw_checklist_7q37.png">
+                                <img class="img-responsive" src="Assets/undraw_checklist_7q37.png">
                             
                         </div>
                         
@@ -331,7 +335,7 @@ text-align-last: right;
             </div>
             
             <!--Attend page-->
-            <div id="attend" style="display: none"  class="container" >
+            <div id="attend" style="display: none"  class="container  animated slideInLeft" >
                     
                     <div id="ADG-logo" class="visible-md visible-lg">
                             <img src="Assets/ADG-logo(black).png" alt="" class="visible-md visible-lg">
@@ -339,7 +343,7 @@ text-align-last: right;
                         <div class="row"  style="height:100%">
                             <div class="col-xs-1"></div>
                             <div class="col-xs-4">
-                                <div class="heading w3-animate-bottom">
+                                <div class="heading">
                                     <br><br>
                                     <!-- <img class="img-responsive" src="Assets/attend-heading.png" style="width:80%;"> -->
                                     <div class="row" id="heading" style="position: relative;">
@@ -364,7 +368,7 @@ text-align-last: right;
                                            
                                     </div>
                                     <div class="col-xs-7">
-                                         <img class="img-responsive w3-animate-bottom"  src="Assets/undraw_product_teardown_elol.png">
+                                         <img class="img-responsive"  src="Assets/undraw_product_teardown_elol.png">
                                     </div>
                                     </div>
                                 <br><br>
@@ -386,7 +390,7 @@ text-align-last: right;
             </div>
 
             <!-- When and Where page -->
-            <div id="WhenWhere" style="display: none"  class="container">
+            <div id="WhenWhere" style="display: none"  class="container  animated slideInLeft">
                     <div id="ADG-logo">
                             <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
                         </div>
@@ -395,7 +399,7 @@ text-align-last: right;
                             <div class="col-xs-3">
                                     <div class="row">
                                             
-                                                 <img class="img-responsive w3-animate-bottom"  src="Assets/undraw_map_light_6ttm.png" style="width: 80% ">
+                                                 <img class="img-responsive"  src="Assets/undraw_map_light_6ttm.png" style="width: 80% ">
                                             
                                      </div>
                                      <br><br><br><br>
@@ -404,7 +408,7 @@ text-align-last: right;
                                         </div>
                                     
                             </div>
-                            <div class="col-xs-6 w3-animate-bottom">
+                            <div class="col-xs-6">
                                     
                                      <div class="heading ">
                                         <!-- <img class="img-responsive" src="Assets/whenWhere-heading.png" style="width:70%;"> -->
@@ -438,14 +442,14 @@ text-align-last: right;
             </div>
             </div>
             <!-- About page -->
-            <div id="about" style="display: none"  class="container">
+            <div id="about" style="display: none"  class="container  animated slideInLeft">
                     <div id="ADG-logo">
                             <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
                         </div>
                         <div class="row"  style="height:100%">
                             <div class="col-xs-1"></div>
                             <div class="col-xs-4">
-                                <div class="heading w3-animate-bottom">
+                                <div class="heading">
                                     <br><br><br>
                                     <!-- <img class="img-responsive" src="Assets/about-heading.png" style="width:100%;"> -->
                                     <div class="row" id="heading" style="position: relative;">
@@ -455,7 +459,7 @@ text-align-last: right;
                                         <P>THE COOL BOIS</P>
                                     </div></div>
                                     <br><br><br><br><br><br>
-                                    <div class="row w3-animate-bottom" id="sub-para" style="position: relative;">
+                                    <div class="row" id="sub-para" style="position: relative;">
                                         <p>Lorem ipsum dolar sit amet, <br> consectetur adipiscing elit</p>
                                     
                                     </div>
@@ -467,7 +471,7 @@ text-align-last: right;
                                            
                                     </div>
                                     <div class="col-xs-8">
-                                         <img class="img-responsive w3-animate-bottom"  src="Assets/undraw_team_spirit_hrr4.png">
+                                         <img class="img-responsive"  src="Assets/undraw_team_spirit_hrr4.png">
                                     </div>
                                     </div>
                                 <br><br>
