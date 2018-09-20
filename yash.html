@@ -283,6 +283,16 @@ text-align-last: right;
   #ADG-logo{
       padding:50px;
   }
+  footer:hover {
+      color:aliceblue;
+  }
+  #contact-arrowContact:hover{
+      color:rgb(62, 255, 255);
+  }
+  #contact{
+      background-color: rgb(241, 241, 241);
+      width:100%;
+  }
   
     </style>
 </head>
@@ -472,7 +482,6 @@ text-align-last: right;
                                     <br><br><br><br><br><br>
                                     <div class="row" id="sub-para" style="position: relative;">
                                         <p>Lorem ipsum dolar sit amet, <br> consectetur adipiscing elit</p>
-                                    
                                     </div>
                                     
                             </div>
@@ -494,10 +503,31 @@ text-align-last: right;
                                              In sed leo in ligula viverra porta.
                                         </p>
                                 </div>
-                                
+                                <footer style="left:0px;margin-top:1vw;">
+                                <div class=""  onclick="contactPage('1')">
+                                    <h3>Contact Us</h3>
+                                    <div id="contact-arrowAbout"><span class="text-center" style="margin-left:2.7vw;font-size: 1.5vw;"><i id="down" class="fa fa-angle-down"></i></span></div>
+                                </div>
+                            </footer>
                             </div>
                         </div>
-            </div>
+                </div>
+
+                <div id="contact" style="display: none"  class="container">
+                    <div id="ADG-logo">
+                        <img src="Assets/ADG-logo(black).png" alt="" class="visible-md visible-lg">
+                    </div>
+                    <div id="contact-heading" class="text-center">
+                        <h2>Get in Touch</h2>
+                        <h3>Tell us more about you.</h3>
+                    </div>
+
+                    <footer style="bottom:10px;"  class="text-center">
+                        <div>
+                            <div id="contact-arrowContact" onclick="active('about')"><span class="text-center" style="margin-left:2.7vw;font-size: 1.5vw;"><i id="up" class="fa fa-angle-up"></i></span></div>
+                        </div>
+                    </footer>
+                </div>
             
             
 <script>
@@ -513,6 +543,9 @@ text-align-last: right;
        
             var active = (act) => { 
                 current = act;
+                $('#contact').css("display","none");
+                $('#about').css("display","block");
+                $("#down").removeClass('animated fadeOutDown');
                 $('*#heading').addClass('animated flipInY');
                 if(current === 'home'){
                     $("#home").css("display","block");
@@ -564,6 +597,9 @@ text-align-last: right;
             }
 
             var change = () => {
+                $('#contact').css("display","none");
+                $('#about').css("display","block");
+                $("#down").removeClass('animated fadeOutDown');
                 $('*#heading').addClass('animated flipInY');
                 if(current === 'home'){
                     $("#home").css("display","none");
@@ -614,6 +650,19 @@ text-align-last: right;
                     current= 'home';
                 }
                 }
+
+                var contactPage = (flag) => {
+                    if(flag=='1'){
+                    $("#down").addClass('animated fadeOutDown');
+                    $("#about").removeClass('animated slideInLeft');
+                    setTimeout(()=>{
+                        $('#contact').css("display","block");
+                        $('#about').css("display","none");
+                        $('#contact').addClass('animated slideInUp');
+                    },500);
+                    }
+                }
+
 </script>
     
 </body>
