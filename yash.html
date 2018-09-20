@@ -63,7 +63,7 @@
      }
   .nav {
        position: relative;
-      background-color: rgba(0, 0, 0, 0.952);
+      background-color: rgb(0, 0, 0);
       height: 100%;
       margin-right: 0px;
       bottom:0px;
@@ -94,6 +94,12 @@
     animation-delay: .3s;
      -webkit-animation-duration: 1.6s;
      -webkit-animation-delay: .3s;
+ }
+ #number{
+    animation-duration: 1.6s;
+    animation-delay: .1s;
+     -webkit-animation-duration: 1.6s;
+     -webkit-animation-delay: .1s;
  }
 
   #home{
@@ -313,7 +319,7 @@ text-align-last: right;
                                     <p>GRAVITAS'18</p>
                                 </div><br>
                                 <div class="row" id="heading">
-                                    <P>UNIDEV 3</P>
+                                    <P>UNIDEV <span id='number'></span></P>
                                 </div><br>
                                 <div class="row" id="sub-heading">
                                         <P>AR. UNITY. NO CODE.</P>
@@ -495,21 +501,15 @@ text-align-last: right;
             
             
 <script>
-       
+       var i = 3;
        var current = 'home';
        $(document).ready(function(){
-        // $("#heading").css("color","rgb(68, 255, 255)");
         $('#heading').addClass('animated slideInLeft');
-        //    setTimeout(() => {
-        //     $('#heading').removeClass('animated slideInLeft');
-            
-        //    }, 1200);
-        //    setTimeout(() => {
-        //     $('#heading').removeClass('animated slideInLeft');
-        //     $('#heading').addClass('animated jello');
-        //     $("#heading").css("color","aliceblue");
-        //     },2000)
-});
+            setTimeout(()=>{
+                $('#number').addClass('animated flipInX');
+                $("#number").html(i);
+            },1810);
+         }, 1200);
        
             var active = (act) => { 
                 current = act;
