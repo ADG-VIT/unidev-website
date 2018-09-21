@@ -298,20 +298,26 @@ text-align-last: right;
       color:rgb(27, 216, 216);
   }
   #contact{
-      background-color: rgb(241, 241, 241);
+      background-color: rgb(255, 255, 255);
       width:100%;
   }
   #formInput{
       border:none;
-      border-bottom:rgb(31, 31, 31) solid 1px;
-      border-right:rgb(41, 41, 41) solid 1px;
+      
+      border-bottom:rgb(0, 0, 0) solid 1.5px;
+      border-right:rgb(0, 0, 0) solid 1.5px;
       font-size:1.2vw;
       font-family: paragraph;
       padding:1vw 1.5vw;
       width:100%;
+      box-shadow: rgb(250, 250, 250);
+      
+  }
+  #send{
+      color:rgb(89, 0, 255);
   }
   #send:hover{
-    color:rgb(13, 219, 219);
+    color:rgb(38, 175, 243);
   }
   
     </style>
@@ -587,12 +593,12 @@ text-align-last: right;
                 <br>
                 <div class="form-row">
                     <div class="form-group col-xs-10">
-                        <textarea type="text" id="formInput" rows="6" name="message" class="form-control" placeholder="message"></textarea>
+                        <textarea type="text" id="formInput" rows="6" name="message" class="form-control" placeholder="Message"></textarea>
                     </div>
                 </div>
-                <div class="form-row" >
+                <div class="form-row">
                     <div class="form-group col-xs-4 pull-left" id="send" onclick="send()">
-                           <h3>Send <i class="fas fa-arrow-right"></i></h3>
+                        <h3>Send <i class="fas fa-arrow-right"></i></h3>
                     </div>
                 </div>
                 <div class="form-row">
