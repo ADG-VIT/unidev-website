@@ -90,12 +90,18 @@
         
   }
  #heading{
-    animation-duration: 1.6s;
+    animation-duration:2s;
     animation-delay: .3s;
-     -webkit-animation-duration: 1.6s;
+     -webkit-animation-duration: 2s;
      -webkit-animation-delay: .3s;
  }
  #number{
+    animation-duration: 1.6s;
+    animation-delay: .3s;
+     -webkit-animation-duration: 1.6s;
+     -webkit-animation-delay: .1s;
+ }
+ .container{
     animation-duration: 1.6s;
     animation-delay: .1s;
      -webkit-animation-duration: 1.6s;
@@ -308,14 +314,14 @@ text-align-last: right;
                  
             </ul> 
             <ul class="bottom-arrow animated slideInDown">
-                <li onclick="change()"><a  id="arrow"  ><i id="arrow-down" class="fas fa-arrow-down"></i></a></li> 
+                <li onclick="change('down')"><a  id="arrow"  ><i id="arrow-down" class="fas fa-arrow-down"></i></a></li> 
             </ul>  
         </nav> 
     </div>
     
        <div>
         <!--Home page-->
-            <div id="home"  style="display: block"  class="container  animated slideInLeft">
+            <div id="home"  style="display: block"  class="container  animated slideInLeft" onwheel="scrollChange(event)">
                     <div id="ADG-logo" onclick="play()"  class="visible-md visible-lg">
                         <img class="image-responsive" src="Assets/ADG-logo.png" alt="">
                     </div>
@@ -356,7 +362,7 @@ text-align-last: right;
             </div>
             
             <!--Attend page-->
-            <div id="attend" style="display: none"  class="container  animated slideInLeft" >
+            <div id="attend" style="display: none"  class="container  animated slideInLeft" onwheel="scrollChange(event)" >
                     
                     <div id="ADG-logo" class="visible-md visible-lg">
                             <img src="Assets/ADG-logo(black).png" alt="" class="visible-md visible-lg">
@@ -411,7 +417,7 @@ text-align-last: right;
             </div>
 
             <!-- When and Where page -->
-            <div id="WhenWhere" style="display: none"  class="container  animated slideInLeft">
+            <div id="WhenWhere" style="display: none"  class="container  animated slideInLeft"  onwheel="scrollChange(event)">
                     <div id="ADG-logo">
                             <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
                         </div>
@@ -462,12 +468,15 @@ text-align-last: right;
                         </div>
             </div>
             </div>
+
+
+
             <!-- About page -->
-            <div id="about" style="display: none"  class="container  animated slideInLeft">
+            <div id="about" style="display: none"  class="container  animated slideInLeft"  onwheel="scrollChange(event)">
                     <div id="ADG-logo">
                             <img src="Assets/ADG-logo.png" alt="" class="visible-md visible-lg">
                         </div>
-                        <div class="row"  style="height:100%">
+                        <div class="row"  style="height:100%" id="content">
                             <div class="col-xs-1"></div>
                             <div class="col-xs-4">
                                 <div class="heading">
@@ -503,7 +512,7 @@ text-align-last: right;
                                              In sed leo in ligula viverra porta.
                                         </p>
                                 </div>
-                                <footer style="left:0px;margin-top:1vw;">
+                                <footer style="left:0px;margin-top:1.5vw;">
                                 <div class=""  onclick="contactPage('1')">
                                     <h3>Contact Us</h3>
                                     <div id="contact-arrowAbout"><span class="text-center" style="margin-left:2.7vw;font-size: 1.5vw;"><i id="down" class="fa fa-angle-down"></i></span></div>
@@ -513,6 +522,8 @@ text-align-last: right;
                         </div>
                 </div>
 
+
+                <!-- Contact_Us page -->
                 <div id="contact" style="display: none"  class="container">
                     <div id="ADG-logo">
                         <img src="Assets/ADG-logo(black).png" alt="" class="visible-md visible-lg">
@@ -522,7 +533,7 @@ text-align-last: right;
                         <h3>Tell us more about you.</h3>
                     </div>
 
-                    <footer style="bottom:10px;"  class="text-center">
+                    <footer style=""  class="text-center">
                         <div>
                             <div id="contact-arrowContact" onclick="active('about')"><span class="text-center" style="margin-left:2.7vw;font-size: 1.5vw;"><i id="up" class="fa fa-angle-up"></i></span></div>
                         </div>
@@ -538,15 +549,18 @@ text-align-last: right;
             setTimeout(()=>{
                 $('#number').addClass('animated flipInX');
                 $("#number").html(i);
-            },1810);
+            },1610);
          }, 1200);
        
+         var checkChange = 1;
             var active = (act) => { 
                 current = act;
+                checkChange = 1;
                 $('#contact').css("display","none");
                 $('#about').css("display","block");
                 $("#down").removeClass('animated fadeOutDown');
-                $('*#heading').addClass('animated flipInY');
+                $("#about").addClass('animated slideInLeft');
+                $('*#heading').addClass('animated slideInLeft');
                 if(current === 'home'){
                     $("#home").css("display","block");
                     $("#attend").css("display","none");
@@ -595,60 +609,122 @@ text-align-last: right;
                 }
 
             }
+            
 
-            var change = () => {
+            var change = (flow) => {
+                
                 $('#contact').css("display","none");
                 $('#about').css("display","block");
                 $("#down").removeClass('animated fadeOutDown');
-                $('*#heading').addClass('animated flipInY');
-                if(current === 'home'){
-                    $("#home").css("display","none");
-                    $("#attend").css("display","block");
-                    $("#WhenWhere").css("display","none");
-                    $("#about").css("display","none");
-                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
-                    $("#home-li").removeClass("active");
-                    $("#attend-li").addClass("active");
-                    $("#WhenWhere-li").removeClass("active");
-                    $("#about-li").removeClass("active");
-                    current= 'attend';
-                }
-                else if(current === 'attend'){
-                    $("#home").css("display","none");
-                    $("#attend").css("display","none");
-                    $("#WhenWhere").css("display","block");
-                    $("#about").css("display","none");
-                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
-                    $("#home-li").removeClass("active");
-                    $("#attend-li").removeClass("active");
-                    $("#WhenWhere-li").addClass("active");
-                    $("#about-li").removeClass("active");
-                    current= 'WhenWhere';
-                }
-                else if(current === 'WhenWhere'){
-                    $("#home").css("display","none");
-                    $("#attend").css("display","none");
-                    $("#WhenWhere").css("display","none");
-                    $("#about").css("display","block");
-                    $("#arrow").html(`<i class="fas fa-arrow-up"></i>`);
-                    $("#home-li").removeClass("active");
-                    $("#attend-li").removeClass("active");
-                    $("#WhenWhere-li").removeClass("active");
-                    $("#about-li").addClass("active");
-                    current= 'about';
-                }
-                else if(current === 'about'){
-                    $("#home").css("display","block");
-                    $("#attend").css("display","none");
-                    $("#WhenWhere").css("display","none");
-                    $("#about").css("display","none");
-                    $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
-                    $("#home-li").addClass("active");
-                    $("#attend-li").removeClass("active");
-                    $("#WhenWhere-li").removeClass("active");
-                    $("#about-li").removeClass("active");
-                    current= 'home';
-                }
+                $("#about").addClass('animated slideInLeft');
+                $('*#heading').addClass('animated slideInLeft');
+                
+                    // flow down from home to attend
+                    if(current === 'home' & flow=='down'){
+                        $("#home").css("display","none");
+                        $("#attend").css("display","block");
+                        $("#WhenWhere").css("display","none");
+                        $("#about").css("display","none");
+                        $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                        $("#home-li").removeClass("active");
+                        $("#attend-li").addClass("active");
+                        $("#WhenWhere-li").removeClass("active");
+                        $("#about-li").removeClass("active");
+                        current= 'attend';
+                    }
+                    else if(current === 'home' & flow=='up'){
+                        $("#home").css("display","block");
+                        $("#attend").css("display","none");
+                        $("#WhenWhere").css("display","none");
+                        $("#about").css("display","none");
+                    }
+                    
+                    // flow down from attend to WhenWhere
+                    else if(current === 'attend' & flow=='down'){
+                        $("#home").css("display","none");
+                        $("#attend").css("display","none");
+                        $("#WhenWhere").css("display","block");
+                        $("#about").css("display","none");
+                        $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                        $("#home-li").removeClass("active");
+                        $("#attend-li").removeClass("active");
+                        $("#WhenWhere-li").addClass("active");
+                        $("#about-li").removeClass("active");
+                        current= 'WhenWhere';
+                    }
+
+                    // flow up from attend to home
+                    else if(current === 'attend' & flow=='up'){
+                        $("#home").css("display","block");
+                        $("#attend").css("display","none");
+                        $("#WhenWhere").css("display","none");
+                        $("#about").css("display","none");
+                        $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                        $("#home-li").addClass("active");
+                        $("#attend-li").removeClass("active");
+                        $("#WhenWhere-li").removeClass("active");
+                        $("#about-li").removeClass("active");
+                        current= 'home';;
+                    }
+                    
+                    // flow down from WhenWhere to about
+                    else if(current === 'WhenWhere' & flow=='down'){
+                        $("#home").css("display","none");
+                        $("#attend").css("display","none");
+                        $("#WhenWhere").css("display","none");
+                        $("#about").css("display","block");
+                        $("#arrow").html(`<i class="fas fa-arrow-up"></i>`);
+                        $("#home-li").removeClass("active");
+                        $("#attend-li").removeClass("active");
+                        $("#WhenWhere-li").removeClass("active");
+                        $("#about-li").addClass("active");
+                        current= 'about';
+                    }
+                    // flow up from WhenWhere to attend
+                    else if(current === 'WhenWhere' & flow=='up'){
+                        $("#home").css("display","none");
+                        $("#attend").css("display","block");
+                        $("#WhenWhere").css("display","none");
+                        $("#about").css("display","none");
+                        $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                        $("#home-li").removeClass("active");
+                        $("#attend-li").addClass("active");
+                        $("#WhenWhere-li").removeClass("active");
+                        $("#about-li").removeClass("active");
+                        current= 'attend';
+                    }
+
+                    // flow down from about to home
+                    else if(current === 'about' & flow=='down'){
+                        $("#home").css("display","block");
+                        $("#attend").css("display","none");
+                        $("#WhenWhere").css("display","none");
+                        $("#about").css("display","none");
+                        $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                        $("#home-li").addClass("active");
+                        $("#attend-li").removeClass("active");
+                        $("#WhenWhere-li").removeClass("active");
+                        $("#about-li").removeClass("active");
+                        current= 'home';
+                    }
+                    // flow up from about to WhenWhere
+                    else if(current === 'about' & flow=='up'){
+                        $("#home").css("display","none");
+                        $("#attend").css("display","none");
+                        $("#WhenWhere").css("display","block");
+                        $("#about").css("display","none");
+                        $("#arrow").html(`<i class="fas fa-arrow-down"></i>`);
+                        $("#home-li").removeClass("active");
+                        $("#attend-li").removeClass("active");
+                        $("#WhenWhere-li").addClass("active");
+                        $("#about-li").removeClass("active");
+                        current= 'WhenWhere';
+                    }
+                
+                checkChange=0;
+                setTimeout(()=>{
+                                checkChange=1;
+                            },500);
                 }
 
                 var contactPage = (flag) => {
@@ -662,6 +738,25 @@ text-align-last: right;
                     },500);
                     }
                 }
+
+                // document.getElementById("content").addEventListener("wheel", change());
+
+                var scrollChange=(event) => {
+                    var y = event.deltaY;
+                    if(y>40){
+                       if(checkChange==1){
+                            change('down');
+                            checkChange=0;
+                        }
+                    }
+                    else if(y<-10){
+                       if(checkChange==1){
+                            change('up');
+                            checkChange=0;
+                        }
+                    }
+                }
+                    
 
 </script>
     
