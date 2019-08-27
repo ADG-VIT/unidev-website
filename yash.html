@@ -31,6 +31,9 @@
     
   body{
       background-color: rgb(89, 0, 255);
+      height:100vh;
+      width:100vw;
+      overflow: hidden;
   }
   .nav-stacked li a{
       writing-mode: vertical-rl;
@@ -39,14 +42,14 @@
     text-decoration: none;
     /* word-spacing: 2px; */
     font-family: paragraph;
-    font-size:1vw;
+    font-size:2.1vh;
     }
      .nav-stacked li .active{
-      border-left: 3px solid rgb(68, 255, 255);
+      border-left: 0.3vh solid rgb(68, 255, 255);
       
      }
      .nav-stacked li:hover a{
-      border-left: 3px solid rgb(255, 114, 114);
+      border-left: 0.3vh solid rgb(255, 114, 114);
       background-color: rgba(37, 37, 85, 0);
       color:snow;
       }
@@ -58,15 +61,16 @@
       
       }
       .nav-stacked li{
-         padding-left: 1vw;
-         padding-right: 2vw;
-         padding-top:2.5vw;
-         
+         padding-left: 1vh;
+         padding-right: 2vh;
+         padding-top:4vh;
+         padding-bottom: 2vh
+       
      }
   .nav {
        position: relative;
       background-color: rgb(0, 0, 0);
-      height: 100%;
+      height: 100vh;
       margin-right: 0px;
       bottom:0px;
       z-index: 3;
@@ -77,18 +81,14 @@
     text-decoration: none;
   }
   #arrow{
-      font-size: 3.8vw;
-      text-align: center;
-      
-      
+      font-size: 7vh;
+      text-align: left;
+      padding-right: 3vh;
   }
   .bottom-arrow{
       background-color: rgb(89, 0, 255);
-      margin-top:3.5vw;
-      padding-top:1.5vw;
-      margin-bottom:0vw;
-      padding-bottom:1.2vw;
-      height: 100%;
+      padding-top:2.1vh;
+      height: 30vh;
         
   }
  #heading{
@@ -108,6 +108,7 @@
     animation-delay: .1s;
      -webkit-animation-duration: 1.6s;
      -webkit-animation-delay: .1s;
+     height: 95vh;
  }
 
   #home{
@@ -151,8 +152,8 @@
       font-size:1.1vw;
       letter-spacing: 1px;
       color:aliceblue;
-     /* margin-top: 508px;*/
-      padding:0px;
+     margin-top: 3vh;
+    
   }
   #attend{
       background-color: rgb(255, 255, 255);
@@ -382,7 +383,7 @@ text-align-last: right;
                 </div>
                 <div class="col-xs-3">
 
-                    <img class="img-responsive" src="Assets/undraw_checklist_7q37.png">
+                    <img style="margin-left:3vw;" class="img-responsive" src="Assets/undraw_checklist_7q37.png">
 
                 </div>
 
